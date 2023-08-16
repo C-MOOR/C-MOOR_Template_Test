@@ -21,3 +21,4 @@ The course covers...
 ```{r}
 devtools::session_info()
 ```
+
