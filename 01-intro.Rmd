@@ -24,16 +24,16 @@ render_authors <- function(authors, collapse=", ") {
 }
 ```
 
+# Introduction
 ::: {.section-authors}
+```{r}
 author_list <- list(
   author("Katherine E.L. Cox", "katherinecox.github.io"),
   author("Frederick Tan")
 )
 render_authors(author_list, collapse=", ")
+```
 :::
-
-# Introduction
-
 
 ## Motivation
 
