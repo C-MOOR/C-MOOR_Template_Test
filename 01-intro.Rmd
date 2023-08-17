@@ -19,20 +19,23 @@ render_authors <- function(authors, collapse=", ") {
       paste0( "[", a$name, "](", a$link, ")" )
     }
   })
-    # join the individual authors together using the collapse string
-  paste(author_markdown, collapse=collapse)
+  # join the individual authors together using the collapse string
+  author_markdown <- paste(author_markdown, collapse=collapse)
+  cat(author_markdown)
 }
 ```
 
 # Introduction
 
-```{r, echo=FALSE, results='as-is'}
+```{r, echo=FALSE, results='asis'}
 author_list <- list(
   author("Katherine E.L. Cox", "katherinecox.github.io"),
   author("Frederick Tan")
 )
-cat(render_authors(author_list, collapse=", "))
+render_authors(author_list)
 ```
+
+And lets add some text here blahblahblah
 
 ## Motivation
 
