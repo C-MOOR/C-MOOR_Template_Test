@@ -24,6 +24,13 @@ render_authors <- function(authors, collapse=", ") {
   cat(author_markdown)
 }
 ```
+```{r, echo=FALSE, results='asis'}
+author_list <- list(
+  author("Katherine E.L. Cox", "katherinecox.github.io"),
+  author("Frederick Tan")
+)
+render_authors(author_list)
+```
 
 # Introduction
 
