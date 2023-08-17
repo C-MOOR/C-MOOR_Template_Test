@@ -3,6 +3,35 @@
 ottrpal::set_knitr_image_path()
 ```
 
+```{r, include = FALSE}
+author <- function(name, link=NULL) {
+  list("name" = name,
+       "link" = link)
+}
+
+render_authors <- function(authors, collapse=", ") {
+  
+  # convert links to markdown for anyone who has a link
+  lapply(authors, function(a) {
+    if (is.null(a$link)) {
+      a$name
+    } else {
+      paste0( "[", a$name, "](", a$link, ")" )
+    }
+  }) |>
+    # join the individual authors together using the collapse string
+    paste(collapse=collapse)
+}
+```
+
+::: {.section-authors}
+author_list <- list(
+  author("Katherine E.L. Cox", "katherinecox.github.io"),
+  author("Frederick Tan")
+)
+render_authors(author_list, collapse=", ")
+:::
+
 # Introduction
 
 
