@@ -26,7 +26,7 @@ render_authors <- function(authors, collapse=", ") {
 
 # Introduction
 ::: {.section-authors}
-```{r}
+```{r, echo=FALSE, results='as-is'}
 author_list <- list(
   author("Katherine E.L. Cox", "katherinecox.github.io"),
   author("Frederick Tan")
