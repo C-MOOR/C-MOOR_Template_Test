@@ -1,8 +1,16 @@
 
 
 
+
+
 # Introduction
 
+
+:::{.section-authors}
+[Katherine E.L. Cox](https://katherinecox.github.io/), Frederick Tan
+:::
+
+And let's add some text here blahblahblah
 
 ## Motivation
 
@@ -32,7 +40,7 @@ devtools::session_info()
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       Etc/UTC                     
-##  date     2023-08-16                  
+##  date     2023-08-18                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version date       lib source                            
