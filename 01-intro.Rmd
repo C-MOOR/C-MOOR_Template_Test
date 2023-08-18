@@ -33,13 +33,13 @@ render_authors <- function(authors, collapse=", ", attributes=".section-authors"
 
 ```{r, echo=FALSE, results='asis'}
 author_list <- list(
-  author("Katherine E.L. Cox", "katherinecox.github.io"),
+  author("Katherine E.L. Cox", "https://katherinecox.github.io/"),
   author("Frederick Tan")
 )
 render_authors(author_list)
 ```
 
-And lets add some text here blahblahblah
+And let's add some text here blahblahblah
 
 ## Motivation
 
