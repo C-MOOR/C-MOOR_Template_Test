@@ -9,7 +9,7 @@ author <- function(name, link=NULL) {
        "link" = link)
 }
 
-render_authors <- function(authors, collapse=", ") {
+render_authors <- function(authors, collapse=", ", attributes=".section-authors" ) {
   
   # convert links to markdown for anyone who has a link
   author_markdown <- lapply(authors, function(a) {
@@ -21,13 +21,16 @@ render_authors <- function(authors, collapse=", ") {
   })
   # join the individual authors together using the collapse string
   author_markdown <- paste(author_markdown, collapse=collapse)
+  # add the fenced div
+  author_markdown <- paste0("\n:::{", attributes, "}\n", author_markdown, "\n:::\n\n")
+                           
+
   cat(author_markdown)
 }
 ```
 
 # Introduction
 
-:::{.section-authors}
 ```{r, echo=FALSE, results='asis'}
 author_list <- list(
   author("Katherine E.L. Cox", "katherinecox.github.io"),
@@ -35,7 +38,6 @@ author_list <- list(
 )
 render_authors(author_list)
 ```
-:::
 
 And lets add some text here blahblahblah
 
