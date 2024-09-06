@@ -1,6 +1,6 @@
 ---
 title: "Course Name"
-date: "August 16, 2023"
+date: "September 06, 2024"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -14,6 +14,8 @@ output:
 ---
 
 # About {-}
+
+testy test
 
 What is the essence/purpose of this course or module (2-3 sentences).
 
