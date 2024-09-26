@@ -3,8 +3,43 @@
 ottrpal::set_knitr_image_path()
 ```
 
+```{r, include = FALSE}
+author <- function(name, link=NULL) {
+  list("name" = name,
+       "link" = link)
+}
+
+render_authors <- function(authors, collapse=", ", attributes=".section-authors" ) {
+  
+  # convert links to markdown for anyone who has a link
+  author_markdown <- lapply(authors, function(a) {
+    if (is.null(a$link)) {
+      a$name
+    } else {
+      paste0( "[", a$name, "](", a$link, ")" )
+    }
+  })
+  # join the individual authors together using the collapse string
+  author_markdown <- paste(author_markdown, collapse=collapse)
+  # add the fenced div
+  author_markdown <- paste0("\n:::{", attributes, "}\n", author_markdown, "\n:::\n\n")
+                           
+
+  cat(author_markdown)
+}
+```
+
 # Introduction
 
+```{r, echo=FALSE, results='asis'}
+author_list <- list(
+  author("Katherine E.L. Cox", "https://katherinecox.github.io/"),
+  author("Frederick Tan")
+)
+render_authors(author_list)
+```
+
+And let's add some text here blahblahblah
 
 ## Motivation
 
